@@ -2,23 +2,63 @@
 <html>
 <head>
   <title>Study Monitor</title>
+
+  <!-- AI -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
   <style>
     body { text-align: center; font-family: Arial; }
-    video { border: 2px solid black; }
+
+    video {
+      border: 2px solid black;
+    }
+
+    /* ALERT OVERLAY */
+    #alertBox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 999;
+    }
+
+    #alertBox video {
+      width: 80%;
+      max-width: 700px;
+    }
+
+    #closeBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body>
 
 <h2>📚 Study Monitor</h2>
-<p>If phone detected → 😡 KYUN NAHI HO RAHI PADHAI</p>
+<p>Phone detected → 🚨 KYUN NAHI HO RAHI PADHAI</p>
 
-<video id="video" width="640" height="480" autoplay></video>
-<br><br>
+<!-- Webcam -->
+<video id="webcam" width="640" height="480" autoplay></video>
 
-<audio id="alertSound" src="https://www.myinstants.com/media/sounds/padhai.mp3"></audio>
+<!-- ALERT VIDEO OVERLAY -->
+<div id="alertBox">
+  <video id="alertVideo" controls>
+    <!-- Put your downloaded video file here -->
+    <source src="padhai.mp4" type="video/mp4">
+  </video>
+  <button id="closeBtn">I will study 😭</button>
+</div>
 
 <script src="app.js"></script>
 
