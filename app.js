@@ -1,48 +1,59 @@
-const video = document.getElementById("video");
-const audio = document.getElementById("alertSound");
+const webcam = document.getElementById("webcam");
+const alertBox = document.getElementById("alertBox");
+const alertVideo = document.getElementById("alertVideo");
+const closeBtn = document.getElementById("closeBtn");
 
 let model;
-let isPlaying = false;
+let alertShown = false;
 
 // Start webcam
 async function setupCamera() {
-  const stream = await navigator.mediaDevices.getUserMedia({
-    video: true
-  });
-  video.srcObject = stream;
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  webcam.srcObject = stream;
 }
 
-// Load AI model
+// Load model
 async function loadModel() {
   model = await cocoSsd.load();
   console.log("Model Loaded");
 }
 
-// Detect objects
+// Detection loop
 async function detect() {
-  const predictions = await model.detect(video);
+  const predictions = await model.detect(webcam);
 
   let phoneDetected = false;
 
-  predictions.forEach(pred => {
-    if (pred.class === "cell phone" && pred.score > 0.6) {
+  predictions.forEach(p => {
+    if (p.class === "cell phone" && p.score > 0.6) {
       phoneDetected = true;
     }
   });
 
-  if (phoneDetected) {
-    if (!isPlaying) {
-      audio.play();
-      isPlaying = true;
-    }
-  } else {
-    isPlaying = false;
+  // If phone detected → show video
+  if (phoneDetected && !alertShown) {
+    showAlert();
   }
 
   requestAnimationFrame(detect);
 }
 
-// Main
+// Show alert
+function showAlert() {
+  alertShown = true;
+  alertBox.style.display = "flex";
+  alertVideo.play();
+}
+
+// Close alert
+closeBtn.onclick = () => {
+  alertBox.style.display = "none";
+  alertVideo.pause();
+  alertVideo.currentTime = 0;
+  alertShown = false;
+};
+
+// Start everything
 async function main() {
   await setupCamera();
   await loadModel();
