@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edu AI — A Personalised Education System</title>
+<meta name="description" content="Edu AI is a personal study assistant that tutors at your pace, adapts to how you learn, and answers doubts instantly — 24/7.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">✦</span>
+      <span>Edu AI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#demo">Try it</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#who">Who it's for</a>
+    </nav>
+    <a class="nav-cta" href="#demo">Talk to Edu AI →</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>Smart Learning · Prototype</p>
+      <h1 class="display">A tutor that learns<br>the way <em>you</em> learn.</h1>
+      <p class="hero-sub">Edu AI is a personalised study assistant — it explains, adapts, and quizzes you until a topic actually sticks. No rigid pace, no waiting for office hours.</p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary">Open the study chat</a>
+        <a href="#problem" class="btn btn-ghost">Why this exists</a>
+      </div>
+      <p class="hero-note">Prototype site · the chat below calls the real Groq API through a server-side proxy</p>
+    </div>
+
+    <div class="hero-panel" aria-hidden="true">
+      <div class="notebook">
+        <div class="notebook-margin"></div>
+        <div class="notebook-lines">
+          <div class="nb-row nb-row--ai">
+            <span class="nb-tag">Edu AI</span>
+            <span class="nb-line w-90"></span>
+            <span class="nb-line w-70"></span>
+          </div>
+          <div class="nb-row nb-row--user">
+            <span class="nb-tag nb-tag--user">You</span>
+            <span class="nb-line w-40"></span>
+          </div>
+          <div class="nb-row nb-row--ai">
+            <span class="nb-tag">Edu AI</span>
+            <span class="nb-line w-80 highlight"></span>
+            <span class="nb-line w-60"></span>
+            <span class="nb-line w-50"></span>
+          </div>
+        </div>
+        <div class="mastery-rail">
+          <span class="node done"></span><span class="track"></span>
+          <span class="node done"></span><span class="track"></span>
+          <span class="node active"></span><span class="track"></span>
+          <span class="node"></span><span class="track"></span>
+          <span class="node"></span>
+        </div>
+        <p class="mastery-label">lesson 3 of 5 · mastering</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="problem">
+    <div class="section-inner two-col">
+      <div>
+        <p class="kicker">01 — Problem statement</p>
+        <h2 class="h2">Traditional classrooms<br>fall short.</h2>
+        <ul class="feature-list">
+          <li>
+            <strong>Rigid speed.</strong>
+            <span>One-size-fits-all teaching forces everyone to learn at the exact same pace.</span>
+          </li>
+          <li>
+            <strong>Student disconnect.</strong>
+            <span>Slower learners get left behind while fast learners get bored easily.</span>
+          </li>
+          <li>
+            <strong>Lack of guidance.</strong>
+            <span>Students rarely get personal 1-on-1 support when stuck on hard topics.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="visual-card" aria-hidden="true">
+        <div class="pace-chart">
+          <div class="pace-bar pace-bar--fixed">
+            <span class="pace-label">Fixed classroom pace</span>
+          </div>
+          <div class="pace-people">
+            <div class="pace-person fast">
+              <span class="dot"></span>
+              <span class="tag tag-fast">bored, ahead</span>
+            </div>
+            <div class="pace-person stuck">
+              <span class="dot"></span>
+              <span class="tag tag-stuck">stuck, no help</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section alt" id="solution">
+    <div class="section-inner two-col reverse">
+      <div class="visual-card" aria-hidden="true">
+        <div class="assistant-card">
+          <div class="assistant-head">
+            <span class="assistant-avatar">✦</span>
+            <div>
+              <p class="assistant-name">Edu AI</p>
+              <p class="assistant-status"><span class="pulse"></span>online · adapting difficulty</p>
+            </div>
+          </div>
+          <div class="assistant-bubble">Let's break quadratic equations into three small steps you can actually remember.</div>
+          <div class="assistant-quiz">
+            <span>Quick check</span>
+            <div class="quiz-bar"><div class="quiz-fill"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="kicker">02 — AI solution</p>
+        <h2 class="h2">Meet Edu AI: your<br>personal study assistant.</h2>
+        <ul class="feature-list">
+          <li>
+            <strong>24/7 personal tutor.</strong>
+            <span>Answers doubts instantly with simple, step-by-step explanations.</span>
+          </li>
+          <li>
+            <strong>Adaptive learning.</strong>
+            <span>Automatically changes lesson difficulty based on your understanding.</span>
+          </li>
+          <li>
+            <strong>Targeted practice.</strong>
+            <span>Generates custom quizzes and summaries to fix weak concepts.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DEMO / CHATBOT -->
+  <section class="section" id="demo">
+    <div class="section-inner">
+      <p class="kicker" style="text-align:center">03 — Live prototype</p>
+      <h2 class="h2 center">Ask Edu AI something.</h2>
+      <p class="center sub-lede">This runs on the real Groq API through a small server-side proxy — the API key lives on the server, never in your browser.</p>
+
+      <div class="chat-shell">
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-log" id="chatLog">
+            <div class="msg msg-ai">
+              <span class="msg-avatar">✦</span>
+              <div class="msg-bubble">
+                Hi, I'm Edu AI. Tell me a subject and where you're stuck — I'll explain it step by step and check your understanding as we go.
+              </div>
+            </div>
+          </div>
+          <form class="chat-input-row" id="chatForm">
+            <textarea id="chatInput" rows="1" placeholder="Ask a question, e.g. “Why does dividing by a negative flip the inequality sign?”" aria-label="Message Edu AI"></textarea>
+            <button type="submit" class="send-btn" id="sendBtn" aria-label="Send">↑</button>
+          </form>
+        </div>
+        <div class="chat-foot">
+          <button class="link-btn" id="resetChat" type="button">Reset conversation</button>
+          <span id="chatMeta" class="chat-meta"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="section alt" id="outcomes">
+    <div class="section-inner">
+      <p class="kicker" style="text-align:center">04 — Expected outcomes</p>
+      <h2 class="h2 center">What changes for a student.</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <p class="stat-num">100<span>%</span></p>
+          <p class="stat-title">Tailored pace</p>
+          <p class="stat-sub">Students move ahead only after mastering each lesson fully.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num">3<span>×</span></p>
+          <p class="stat-title">Better retention</p>
+          <p class="stat-sub">Interactive, bite-sized topics help information stay remembered longer.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num accent-mint">Zero</p>
+          <p class="stat-title">Learning gaps</p>
+          <p class="stat-sub">Immediate resolution of doubts prevents students from lagging behind.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-num">24<span>/7</span></p>
+          <p class="stat-title">Instant support</p>
+          <p class="stat-sub">Students get help whenever they sit down to study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section" id="benefits">
+    <div class="section-inner">
+      <p class="kicker" style="text-align:center">05 — Key benefits</p>
+      <h2 class="h2 center">Built around the student, not the syllabus.</h2>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <span class="benefit-icon">⏱</span>
+          <h3>Learn at your pace</h3>
+          <p>No stress or rush. Students take whatever time they need to truly master every topic.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">◐</span>
+          <h3>Deeper understanding</h3>
+          <p>Edu AI breaks down complex topics into small, clear steps using everyday examples.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">↗</span>
+          <h3>Saves time &amp; effort</h3>
+          <p>Focuses directly on weak spots so study sessions become more effective and rewarding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO FOR -->
+  <section class="section alt" id="who">
+    <div class="section-inner two-col">
+      <div>
+        <p class="kicker">06 — Applications</p>
+        <h2 class="h2">Who is it for?</h2>
+        <ul class="feature-list">
+          <li>
+            <strong>School &amp; college students.</strong>
+            <span>Homework assistance, test preparation, and clear concept reviews.</span>
+          </li>
+          <li>
+            <strong>Self-learners.</strong>
+            <span>Mastering new skills or subjects at any age, independently.</span>
+          </li>
+          <li>
+            <strong>Teachers &amp; schools.</strong>
+            <span>Works as a teaching assistant to monitor class progress easily.</span>
+          </li>
+          <li>
+            <strong>Diverse learners.</strong>
+            <span>Adapts content format to support different learning abilities.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="visual-card" aria-hidden="true">
+        <div class="who-map">
+          <span class="who-node who-top">Students</span>
+          <span class="who-node who-left">Institutions</span>
+          <span class="who-node who-center">✦</span>
+          <span class="who-node who-right">Self‑learners</span>
+          <span class="who-node who-bottom">Teachers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p><strong>Edu AI</strong> — a student concept prototype, built from a pitch deck to a working page.</p>
+    <p class="footer-note">The chat demo calls the Groq API through a small server-side proxy, so the API key stays on the server and is never sent to visitors' browsers. Details in the README.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
